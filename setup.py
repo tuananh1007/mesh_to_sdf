@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="mesh-to-sdf",
+    name="mesh_to_sdf_modified",
     version="0.0.14",
     author="Marian Kleineberg",
     author_email="mail@marian42.de",
