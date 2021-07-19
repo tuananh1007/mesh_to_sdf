@@ -1,5 +1,5 @@
 from .scan import Scan, get_camera_transform_looking_at_origin
-from .utils import sample_uniform_points_in_unit_sphere
+from .utils import sample_uniform_points_in_unit_sphere, sample_uniform_points_in_unit_cube
 from .utils import get_raster_points, check_voxels
 
 import trimesh
