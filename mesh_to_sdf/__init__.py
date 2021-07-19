@@ -58,4 +58,4 @@ def sample_sdf_near_surface(mesh, number_of_points = 500000, surface_point_metho
 
     surface_point_cloud = get_surface_point_cloud(mesh, surface_point_method, 1, scan_count, scan_resolution, sample_point_count, calculate_normals=sign_method=='normal' or return_gradients)
 
-    return surface_point_cloud.sample_sdf_near_surface(number_of_points, surface_point_method=='scan', sign_method, normal_sample_count, min_size, return_gradients)
+    return surface_point_cloud.sample_sdf_near_surface(number_of_points, surface_point_method, sign_method, normal_sample_count, min_size, return_gradients)
