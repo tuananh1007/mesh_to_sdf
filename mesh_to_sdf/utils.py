@@ -56,3 +56,16 @@ def sample_uniform_points_in_unit_sphere(amount):
         return result
     else:
         return unit_sphere_points[:amount, :]
+    
+def sample_uniform_points_in_unit_cube(amount):
+    unit_sphere_points = np.random.uniform(-1, 1, size=(amount * 2 + 20, 3))
+
+    points_available = unit_sphere_points.shape[0]
+    if points_available < amount:
+        # This is a fallback for the rare case that too few points are inside the unit sphere
+        result = np.zeros((amount, 3))
+        result[:points_available, :] = unit_sphere_points
+        result[points_available:, :] = sample_uniform_points_in_unit_cube(amount - points_available)
+        return result
+    else:
+        return unit_sphere_points[:amount, :]
